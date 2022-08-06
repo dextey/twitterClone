@@ -4,13 +4,18 @@
   "description": "Twitter API",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon index.js"
+    "start": "nodemon index.js"
   },
   "author": "dexter",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "method-override": "^3.0.0",
     "mongoose": "^6.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
