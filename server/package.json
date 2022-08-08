@@ -16,6 +16,7 @@
     "mongoose": "^6.5.1"
   },
   "devDependencies": {
+    "colors": "^1.4.0",
     "nodemon": "^2.0.19"
   }
 }
