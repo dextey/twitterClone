@@ -7,22 +7,19 @@ const colors = require("colors");
 const PORT = process.env.PORT || 5000;
 
 const connectDb = require("./config/db");
+const errorHandler = require("./middleware/errorMiddleware");
 
 const app = express();
-
 app.use(bodyParser.json());
 app.use(cors());
 
 const postsRoutes = require("./routes/postsRoutes");
+const userRoutes = require("./routes/userRoutes");
+
+app.use("/api/users/", userRoutes);
 app.use("/api/posts/", postsRoutes);
 
-app.use((err, req, res, next) => {
-  console.log("Error handling middleware called.");
-  console.log("Path:", req.path);
-  res.send({
-    error: err.message,
-  });
-});
+app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Server listening at port : ${PORT}`);
