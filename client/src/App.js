@@ -1,21 +1,16 @@
-import Content from "./Components/Content";
-import Sidebar from "./Components/Sidebar";
-import SidebarRight from "./Components/SidebarRight";
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./Pages/Homepage";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
 
 const App = () => {
   return (
     <div className="container mx-auto">
-      <div className="flex  mx-10">
-        <div className="flex w-3/12">
-          <Sidebar />
-        </div>
-        <div className="flex flex-grow ">
-          <Content />
-        </div>
-        <div className="flex w-3/12">
-          <SidebarRight />
-        </div>
-      </div>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/signIn" element={<SignIn />} />
+        <Route path="/signUp" element={<SignUp />} />
+      </Routes>
     </div>
   );
 };

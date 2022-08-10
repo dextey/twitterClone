@@ -2,25 +2,16 @@ import React from "react";
 import { BiStar } from "react-icons/bi";
 import Tweet from "./Tweet";
 
-function Content() {
+function Content({ posts }) {
   return (
     <div className="flex flex-col border-[1px] w-full h-screen ">
       <Navbar />
       <TweetHandler />
 
       <div className="  max-h-screen overflow-y-auto no-scrollbar">
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+        {posts.map((post) => {
+          return <Tweet post={post} />;
+        })}
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { BiHeart, BiMessageRounded, BiSync } from "react-icons/bi";
 
-function Tweet() {
+function Tweet({ post }) {
   return (
     <div className="flex flex-col border-[1px]">
       <div className="flex m-3">
@@ -18,7 +18,7 @@ function Tweet() {
             <span className="font-light px-2">@dexter</span>
           </div>
 
-          <div className="content py-3">What a wonderfull morning</div>
+          <div className="content py-3">{post.tweet}</div>
           <div className="flex   w-full text-slate-400 text-2xl">
             <BiMessageRounded className="mr-3" />
             <BiSync className="mx-3" />
