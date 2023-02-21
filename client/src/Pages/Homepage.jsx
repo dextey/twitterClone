@@ -22,7 +22,7 @@ function Homepage() {
           setPosts(res.data);
         });
     } else {
-      window.location.href = "/signIn";
+      // window.location.href = "/signIn";
     }
   }, []);
 
@@ -31,7 +31,7 @@ function Homepage() {
       <div className="flex w-3/12">
         <Sidebar />
       </div>
-      <div className="flex flex-grow ">
+      <div className="flex flex-grow px-3">
         <Content posts={posts} />
       </div>
       <div className="flex w-3/12">

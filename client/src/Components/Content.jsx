@@ -32,18 +32,18 @@ const Navbar = () => {
 
 const TweetHandler = () => {
   return (
-    <div className="flex items-center ">
-      <div>
+    <div className="flex items-center mx-3 p-2">
+      <div className="flex flex-col items-start">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRio3TkUh6cLjGngN-p2LGoJZR0dGHWEpuabg&usqp=CAU"
           style={{ width: 60, borderRadius: 100 }}
           alt=""
         />
       </div>
-      <div className="flex flex-col w-full px-4 m-2">
-        <div className="px-3 m-2  ">
+      <div className="flex flex-col w-full pr-4 mx-2">
+        <div className="px-3 m-2">
           <input
-            className="bg-transparent w-full focus:outline-none placeholder-slate-500 py-3 text-[1.2rem] "
+            className="bg-transparent w-full focus:outline-none px-4 placeholder-slate-500 py-3 text-[1.2rem] "
             type="text"
             placeholder="What's Happening? "
           />
