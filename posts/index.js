@@ -9,10 +9,11 @@ app.use(express.json());
 
 const posts = {};
 
-app.get("/", (req, res) => {
+app.get("/tweets", (req, res) => {
   res.status(200).send(posts);
 });
-app.post("/", (req, res) => {
+
+app.post("/tweets", (req, res) => {
   const data = req.body;
   const id = randomBytes(7).toString("hex");
   posts[id] = { id: id, content: data.content };
